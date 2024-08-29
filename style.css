@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#12afee,
+    #a8e2ff);
+    overflow: hidden;
+}
+/* cloud */
+.cloud{
+    width: 200px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation-name: cloud ;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    
+}
+.cloud p{
+    z-index: -1;
+}
+@keyframes cloud{
+    0%{
+        left: -200px;
+    }
+    100%{
+        left: 100%;
+    }
+}
+.cloud::before{
+    content: "";
+    width: 65px;
+    height: 65px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: 30px;
+}
+.cloud::after{
+    content:"";
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    left: 80px;
+}
+.cloud2{
+    top: 200px;
+    left: 80px;
+    animation-name: cloud2;
+    margin-top: 15px;
+}
+@keyframes cloud2{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: -200px;
+    }
+}
+.mountain{
+    width: 420px;
+    height: 420px;
+    background: linear-gradient(#45c8f4, #169bf1);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: -210px;
+    left: 35%;
+}
+.mountain::after{
+    content: "";
+    width: 420px;
+    height: 420px;
+    background: linear-gradient(#45c8f4,#12afee);
+    position: absolute;
+    top: -400px;
+    left: 400px;
+}
+.mountain::before{
+    content: "";
+    width: 420px;
+    height: 420px;
+    background: linear-gradient(#45c8f4,#12afee);
+    position: absolute;
+    top: 400px;
+    left: -380px;
+}
+.sun{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -100px;
+    left: 28%;
+    z-index: -1;
+    animation: sun 15s linear 1s infinite alternate;
+}
+@keyframes sun{
+    0%{
+        bottom: -100px;
+        background-color: rgb(253, 188, 46);
+    }
+    40%{
+        background-color: rgb(233, 222, 14);
+        box-shadow: 0 0 80px 0 yellow;
+    }
+    100%{
+        bottom: 80%;
+        background-color: yellow;
+        box-shadow: 0 0 120px 0 yellow;
+    }
+}
+.plane{
+    width: 100px;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    animation: air 10s linear both 2s;
+   
+}
+.plane img{
+    width: 400px;
+
+}
+@keyframes air{
+    0%{
+        left: -500px;
+        top: 10%;
+    }
+    100%{
+        left: 100%;
+        top: 10%;
+    }
+}
